@@ -17,3 +17,4 @@ Fullstack Engineering
 2. **Interactive Kanban Boards:** Seamless drag-and-drop state management for tasks (To Do, In Progress, In Review, Done).
 3. **Task Engine logic:** Create tickets, assign developers, set priority tags (Low, Medium, High), and track deadlines.
 4. **Real-Time Activity Sync:** Live dashboard updates via WebSockets when team members update task statuses.
+<img width="1218" height="440" alt="Untitled" src="https://github.com/user-attachments/assets/963e3265-9ede-4bb3-98d0-7809768e708d" />
