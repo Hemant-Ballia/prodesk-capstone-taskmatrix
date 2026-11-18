@@ -18,3 +18,4 @@ Fullstack Engineering
 3. **Task Engine logic:** Create tickets, assign developers, set priority tags (Low, Medium, High), and track deadlines.
 4. **Real-Time Activity Sync:** Live dashboard updates via WebSockets when team members update task statuses.
 <img width="1218" height="440" alt="Untitled" src="https://github.com/user-attachments/assets/963e3265-9ede-4bb3-98d0-7809768e708d" />
+https://www.figma.com/design/79luOOEHHS4ilB3Nn8yQGm/TaskMatrix---Capstone-UI?node-id=0-1&t=m2O69jthSR9dZqGE-1
