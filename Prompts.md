@@ -24,3 +24,18 @@ During the Capstone planning phase, AI was utilized strictly as an architectural
 * **Prompt Used:** 
   > "In Next.js with Zustand and dnd-kit, what is the best enterprise pattern for handling 'optimistic UI updates'? If a user drags a task to 'Done', how should I structure the Zustand store to immediately show the change on the client, while waiting for the Socket.io server confirmation in the background?"
 * **Result:** Provided a clear structural pattern for rolling back Zustand state if the backend WebSocket event returns an error, ensuring a seamless user experience.
+---
+
+## Sprint 14: The Walking Skeleton (Authentication & Route Protection)
+
+### Prompt 4: JWT Verification & Password Security Edge Cases
+**Objective:** Double-check Express auth middleware and bcrypt hashing implementation for common security pitfalls.
+- **Prompt Used:**
+  > "I have implemented `/api/auth/register` and `/api/auth/login` in Express using `bcryptjs` and `jsonwebtoken`. What edge cases should I handle in my `authMiddleware` when validating the `Authorization: Bearer` header so malformed or expired tokens reliably return a 401 without crashing the server?"
+- **Result:** Confirmed proper `try/catch` handling around `jwt.verify` and ensured password hashes are excluded from API responses.
+
+### Prompt 5: Preventing Next.js Hydration Mismatches with `localStorage`
+**Objective:** Resolve client-side token checks on protected App Router pages without triggering SSR hydration errors.
+- **Prompt Used:**
+  > "In Next.js App Router, reading the JWT from `localStorage` directly during render causes a hydration mismatch on `/dashboard`. What is the cleanest way to guard a client route and sync the token with Zustand on mount?"
+- **Result:** Moved the `localStorage` check and `/api/tasks` verification inside `useEffect`, redirecting unauthenticated or 401 responses cleanly to `/login`.
