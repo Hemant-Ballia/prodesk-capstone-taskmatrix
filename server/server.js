@@ -9,7 +9,18 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://prodesk-capstone-client.vercel.app',
+  'https://prodesk-capstone.vercel.app',
+  process.env.CLIENT_URL
+].filter(Boolean);
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
